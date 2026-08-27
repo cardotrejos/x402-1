@@ -147,6 +147,13 @@ jobs:
         if: steps.families.outputs.configured == 'true'
         run: uv python install 3.10
 
+      - name: Setup Erlang/Elixir
+        if: steps.families.outputs.configured == 'true'
+        uses: erlef/setup-beam@8aa8a857c6be0daae6e97272bb299d5b942675a4 # v1.20.4
+        with:
+          otp-version: "27"
+          elixir-version: "1.18"
+
       - name: Install and build TypeScript SDK
         if: steps.families.outputs.configured == 'true'
         working-directory: ./typescript

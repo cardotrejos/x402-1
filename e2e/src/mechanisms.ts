@@ -19,7 +19,7 @@ import { fileURLToPath } from 'url';
 import type { PaymentFlowName } from '@x402/core/types';
 
 /** Keep local types here to avoid circular imports with types.ts / networks.ts. */
-export type SdkId = 'typescript' | 'python' | 'go';
+export type SdkId = 'typescript' | 'python' | 'go' | 'elixir';
 export type ConfigRole = 'server' | 'client' | 'facilitator';
 /** Network id, e.g. "evm" — one per `mechanisms_<id>.json` file. No fixed union: adding a network is a catalog-only edit. */
 export type CatalogNetworkId = string;
